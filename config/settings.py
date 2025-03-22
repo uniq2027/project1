@@ -139,22 +139,3 @@ EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  # Set in environment variables
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Set in environment variables
 DEFAULT_FROM_EMAIL = 'noreply@yourdomain.com'
 
-# Logging (optional)
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'ERROR',
-            'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'logs/django_error.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    },
-}
