@@ -25,7 +25,7 @@ DEBUG = False  # Set to False for production
 
 # Define allowed hosts (replace with your Render domain)
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "project1-osox.onrender.com"]
+ALLOWED_HOSTS = ["project1-osox.onrender.com"]
 
 
 # CSRF Trusted Origins for Render
