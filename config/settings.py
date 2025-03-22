@@ -76,10 +76,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-# Database Configuration (Use PostgreSQL on Render)
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join('/opt/render/persistent', 'db.sqlite3'),  # Use Render's persistent storage
+    }
 }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
