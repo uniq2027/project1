@@ -21,7 +21,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # Set to False for production
+DEBUG = True  # Set to False for production
 
 # Define allowed hosts (replace with your Render domain)
 
